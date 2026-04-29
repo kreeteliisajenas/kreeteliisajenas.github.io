@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css">
     
-    <title>My test page</title>
+    <title>Choropleth map</title>
 </head>
 
 <body>
@@ -24,9 +24,9 @@
     </div>
 
     <!-- 2. Navbar -->
-   <nav class="navbar">
-    <a href="index.html" class="active">Basic Map</a>
-    <a href="choroplethmap.html">Choropleth Map</a>
+    <nav class="navbar">
+    <a href="index.html">Basic Map</a>
+    <a href="choroplethmap.html" class="active">Choropleth Map</a>
     <a href="heatmap.html">Heatmap</a>
 </nav>
 
@@ -51,11 +51,9 @@
     </footer>
 
     <!-- Leaflet JS -->
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js">
-	</script>
-	<script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js">
-	</script>
-	<script src="js/javascript.js"></script>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/leaflet-choropleth@1.1.4/dist/choropleth.js"></script>
+<script src="js/choroplethmap.js"></script>
 
 </body>
 </html>
