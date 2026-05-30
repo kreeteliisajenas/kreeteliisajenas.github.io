@@ -1,62 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Web GIS application</title>
-
-    <!-- CSS -->
-	<link rel="stylesheet" href="css/styles.css">
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Tartu map application</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
-    <!-- Styling of marker cluster plugin -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css">
+    <link rel="stylesheet" href="css/appStyle.css">
+  </head>
+
+  <script type="module">
+    import { defaultMapSettings } from "./js/appCode.js"
+
+    document.getElementById("applySettingsButton").addEventListener("click", defaultMapSettings)
+  </script>
+
+  <body>
+    <div class="map-title">
+    	<h1>Tartu map application</h1>
+    </div>
+
+    <button id="applySettingsButton" class="default-button">
+      Default view
+    </button>
+
+<div id="info-box">
+
+    <div id="info-header">
+        <h4>Query Results</h4>
+        <button id="info-close">×</button>
+    </div>
+
+    <div id="info-content">
+        Click on the map to get feature info.
+    </div>
+
+</div>
+
+    <div id="map"></div>
     
-    <title>My test page</title>
-</head>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 
-<body>
+    <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
 
-    <!-- 1. Banner -->
-    <div class="banner">
-        <img src="img/banner.jpg" alt="Banner image">
-    </div>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
 
-    <!-- 2. Navbar -->
-   <nav class="navbar">
-    <a href="index.html" class="active">Basic Map</a>
-    <a href="choroplethmap.html">Choropleth Map</a>
-    <a href="heatmap.html">Heatmap</a>
-</nav>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-choropleth@1.1.4/dist/choropleth.js"></script> 
 
-    <!-- 3. Title -->
-    <div class="title">
-        <h1>Web GIS application</h1>
-    </div>
+    // <script src="https://cdn.jsdelivr.net/npm/leaflet-vector-tile-layer@0.11.0/dist/VectorTileLayer.min.js"></script>
 
-<button onclick="defaultMapSettings()">Default</button>
+    // <script src="js/styles.js"></script>
 
-    <!-- 4. Container -->
-    <div class="container">
+    <script src="https://cdn.jsdelivr.net/npm/@turf/turf@7/turf.min.js"></script>
 
-        <!-- 5. Map -->
-        <div id="map"></div>
-
-    </div>
-
-    <!-- 6. Footer -->
-    <footer class="footer">
-        © Kreete-Liisa Jenas, Tartu University, 2026
-    </footer>
-
-    <!-- Leaflet JS -->
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js">
-	</script>
-	<script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js">
-	</script>
-	<script src="js/javascript.js"></script>
-
-</body>
+    <script type="module" src="js/appCode.js"></script>
+  </body>
 </html>
-
